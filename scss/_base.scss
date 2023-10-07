@@ -1,0 +1,11 @@
+$main-bg-color: #F6F6F6;
+$footer-color: #353535;
+$head-bg-color: #EAEAEA;
+
+@mixin font-title {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin font-text {
+    font-family: 'Roboto', sans-serif;
+}
