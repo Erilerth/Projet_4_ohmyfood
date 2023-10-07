@@ -16,6 +16,13 @@ h3 {
   @include b.font-text;
 }
 
+a,
+a:visited {
+  text-decoration: none;
+  @include b.font-text;
+}
+
+// ************* Header *************
 header {
   img {
     display: block;

@@ -12,6 +12,12 @@ h3 {
   font-family: "Roboto", sans-serif;
 }
 
+a,
+a:visited {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
 header img {
   display: block;
   margin-left: auto;
