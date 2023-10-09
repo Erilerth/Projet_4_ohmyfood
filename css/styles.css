@@ -1,21 +1,15 @@
 * {
   margin: 0 0;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
   font-family: "Shrikhand", cursive;
 }
 
-p,
-h2,
-h3 {
-  font-family: "Roboto", sans-serif;
-}
-
 a,
 a:visited {
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
 }
 
 .btn {
@@ -73,6 +67,50 @@ header p {
   display: block;
   text-align: center;
   margin-bottom: 3.6rem;
+}
+
+.fonctionnement {
+  margin: 0 20px;
+  margin-top: 3rem;
+  margin-bottom: 4.3rem;
+}
+.fonctionnement ol {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  counter-reset: item;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1.6rem;
+  position: relative;
+}
+.fonctionnement i {
+  padding-left: 2.2rem;
+  padding-right: 1.2rem;
+}
+.fonctionnement li {
+  display: block;
+  position: relative;
+  width: 20rem;
+  padding: 1.8rem 0;
+}
+.fonctionnement li:before {
+  content: counter(item) "  ";
+  counter-increment: item;
+  position: absolute;
+  left: -4px;
+  top: 1.8rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: purple;
+  text-align: center;
+}
+.fonctionnement .cards {
+  background-color: #F6F6F6;
+}
+.fonctionnement .cards-border {
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

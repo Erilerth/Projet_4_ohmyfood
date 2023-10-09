@@ -13,3 +13,16 @@
     box-shadow: $btn-shadow-hover;
     opacity: $btn-opacity-hover;
 }
+
+// ********** card ********** //
+@mixin card-bg-fonctionnement {
+    background-color: $main-bg-color;
+}
+
+@mixin card-border-fonctionnement {
+    border-radius: $border-card-fonctionnement;
+}
+
+@mixin card-bg-restaurants {
+    background-color: white;
+}
