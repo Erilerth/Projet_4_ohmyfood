@@ -1,0 +1,15 @@
+@use "_base" as *;
+
+// ********** btn ********** //
+@mixin button {
+    border-radius: $border-btn;
+    background: $btn-color;
+    box-shadow: $btn-shadow;
+    color: $text-btn-color;
+    transition: all 300ms linear;
+}
+
+@mixin button-hover {
+    box-shadow: $btn-shadow-hover;
+    opacity: $btn-opacity-hover;
+}

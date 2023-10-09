@@ -22,7 +22,15 @@ a:visited {
   @include b.font-text;
 }
 
-// ************* Header *************
+.btn {
+  @include c.button;
+
+  &:hover {
+    @include c.button-hover;
+  }
+}
+
+// ************* Header ************* //
 header {
   img {
     display: block;
@@ -43,5 +51,36 @@ header {
 
   p {
     margin: 15px 0;
+  }
+}
+
+// ************* Reservation ************* //
+.reservation {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: b.$main-bg-color;
+
+  article {
+    text-align: center;
+    margin-bottom: 1.7rem;
+  }
+
+  h2 {
+    margin: 0 50px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 0 20px;
+  }
+
+  a {
+    padding: 13px 19px;
+    width: fit-content;
+    display: block;
+    text-align: center;
+    margin-bottom: 3.6rem;
   }
 }
