@@ -87,6 +87,10 @@ header p {
 .fonctionnement i {
   padding-left: 2.2rem;
   padding-right: 1.2rem;
+  color: #7E7E7E;
+}
+.fonctionnement .market {
+  color: #9356DC;
 }
 .fonctionnement li {
   display: block;
@@ -95,16 +99,21 @@ header p {
   padding: 1.8rem 0;
 }
 .fonctionnement li:before {
+  display: flex;
   content: counter(item) "  ";
   counter-increment: item;
   position: absolute;
-  left: -4px;
+  font-size: 14px;
+  left: -10px;
   top: 1.8rem;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background-color: purple;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #9356DC;
 }
 .fonctionnement .cards {
   background-color: #F6F6F6;

@@ -99,6 +99,11 @@ header {
   i {
     padding-left: 2.2rem;
     padding-right: 1.2rem;
+    color: b.$grey-tint;
+  }
+
+  .market {
+    color: b.$primary_color;
   }
 
   li {
@@ -108,17 +113,22 @@ header {
     padding: 1.8rem 0;
   }
 
-  li:before { 
+  li:before {
+    display: flex;
     content: counter(item) "  ";
     counter-increment: item;
     position: absolute;
-    left: -4px;
+    font-size: 14px;;
+    left: -10px;
     top: 1.8rem;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background-color: purple;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: b.$primary_color;
   }
 
   .cards {
