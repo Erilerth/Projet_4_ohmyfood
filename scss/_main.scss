@@ -171,3 +171,35 @@ header {
     }
   }
 }
+
+// ************* Footer ************* //
+footer {
+  padding: 22px 25px;
+  color:white;
+  background-color: b.$footer-color;
+
+  a {
+    color: white;
+  }
+
+  h1 {
+    padding-bottom: 1rem;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  i {
+    width: 15px;
+  }
+}
