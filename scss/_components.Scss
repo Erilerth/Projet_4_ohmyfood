@@ -26,3 +26,10 @@
 @mixin card-bg-restaurants {
     background-color: white;
 }
+
+@mixin card-restaurants {
+    width: 100%;
+    background-color: white;
+    border-radius: $border-card-restaurants;
+    height: 250px;
+}
