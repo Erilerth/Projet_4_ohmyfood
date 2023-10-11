@@ -7,6 +7,12 @@
   @include b.font-text;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 h1 {
   @include b.font-title;
 }
@@ -169,6 +175,24 @@ header {
       object-fit: cover;
       border-radius: b.$border-card-restaurants b.$border-card-restaurants 0 0;
     }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      margin-left: 1rem;
+      margin-right: 1.5rem;
+      margin-top: 0.5rem;
+
+      i {
+        font-size: 22px;
+
+        &:checked {
+          color: aqua;
+        }
+      }
+    }
   }
 }
 
@@ -203,3 +227,5 @@ footer {
     width: 15px;
   }
 }
+
+// ******************************* Media Query ******************************* //

@@ -3,6 +3,8 @@ $footer-color: #353535;
 $head-bg-color: #EAEAEA;
 $primary_color: #9356DC;
 $grey-tint: #7E7E7E;
+$green: #99E2D0;
+$green-font: #008766;
 
 @mixin font-title {
     font-family: 'Shrikhand', cursive;
@@ -24,3 +26,6 @@ $btn-opacity-hover: 0.75;
 // ********** card ********** //
 $border-card-fonctionnement: 20px;
 $border-card-restaurants: 15px;
+
+// ********** Breakpoints ********** //
+$screen: 480px;
