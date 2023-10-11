@@ -20,6 +20,7 @@ h1 {
 a,
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 .btn {
@@ -82,6 +83,7 @@ header {
     display: block;
     text-align: center;
     margin-bottom: 3.6rem;
+    color: white;
   }
 }
 
@@ -90,6 +92,16 @@ header {
   margin: 0 20px;
   margin-top: 3rem;
   margin-bottom: 4.3rem;
+
+  @include l.tablet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    article {
+      width: fit-content;
+    }
+  }
 
   ol {
     display: flex;
@@ -152,14 +164,26 @@ header {
   background-color: b.$main-bg-color;
   padding: 4rem 1rem;
 
+    @include l.tablet {
+      display: flex;
+      justify-content: center;
+
+      > div {
+        max-width: 490px;
+        width: 100%;
+      }
+  }
+
   h2 {
     margin-bottom: 2rem;
+      @include l.tablet;
   }
 
   .menus {
     display: flex;
     flex-direction: column;
     gap: 18px;
+    width: auto;
   }
 
   .img-container {
@@ -176,7 +200,7 @@ header {
       border-radius: b.$border-card-restaurants b.$border-card-restaurants 0 0;
     }
 
-    > div {
+    .card-text {
       display: flex;
       justify-content: space-between;
       align-items: center;

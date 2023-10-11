@@ -16,6 +16,7 @@ h1 {
 a,
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 .btn {
@@ -73,12 +74,23 @@ header p {
   display: block;
   text-align: center;
   margin-bottom: 3.6rem;
+  color: white;
 }
 
 .fonctionnement {
   margin: 0 20px;
   margin-top: 3rem;
   margin-bottom: 4.3rem;
+}
+@media only screen and (min-width: 481px) {
+  .fonctionnement {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .fonctionnement article {
+    width: fit-content;
+  }
 }
 .fonctionnement ol {
   display: flex;
@@ -132,6 +144,16 @@ header p {
   background-color: #F6F6F6;
   padding: 4rem 1rem;
 }
+@media only screen and (min-width: 481px) {
+  .restaurants {
+    display: flex;
+    justify-content: center;
+  }
+  .restaurants > div {
+    max-width: 490px;
+    width: 100%;
+  }
+}
 .restaurants h2 {
   margin-bottom: 2rem;
 }
@@ -139,6 +161,7 @@ header p {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: auto;
 }
 .restaurants .img-container {
   position: relative;
@@ -166,7 +189,7 @@ header p {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-.restaurants .cards > div {
+.restaurants .cards .card-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -175,10 +198,10 @@ header p {
   margin-right: 1.5rem;
   margin-top: 0.5rem;
 }
-.restaurants .cards > div i {
+.restaurants .cards .card-text i {
   font-size: 22px;
 }
-.restaurants .cards > div i:checked {
+.restaurants .cards .card-text i:checked {
   color: aqua;
 }
 
