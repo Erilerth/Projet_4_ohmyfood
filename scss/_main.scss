@@ -71,6 +71,10 @@ header {
   h2 {
     margin: 0 50px;
     margin-bottom: 1rem;
+
+    @include l.Desktop {
+      font-size: 40px;
+    }
   }
 
   p {
@@ -92,12 +96,12 @@ header {
   margin: 0 20px;
   margin-top: 3rem;
   margin-bottom: 4.3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   @include l.tablet {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
+    
     article {
       width: fit-content;
     }
@@ -112,6 +116,10 @@ header {
     padding: 0;
     margin-top: 1.6rem; 
     position: relative;
+
+    @include l.Desktop {
+      flex-direction: row;
+    }
   }
 
   i {
@@ -171,6 +179,10 @@ header {
       > div {
         max-width: 490px;
         width: 100%;
+
+        @include l.Desktop {
+          max-width: 1080px;
+        }
       }
   }
 
@@ -184,6 +196,13 @@ header {
     flex-direction: column;
     gap: 18px;
     width: auto;
+
+    @include l.Desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px 0;
+      justify-content: space-between;
+    }
   }
 
   .img-container {
@@ -226,6 +245,13 @@ footer {
   color:white;
   background-color: b.$footer-color;
 
+  @include l.Desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 90px;
+    padding: 30px 25px;
+  }
+
   a {
     color: white;
   }
@@ -241,6 +267,12 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 7px;
+
+    @include l.Desktop {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
   }
 
   li {
@@ -251,5 +283,3 @@ footer {
     width: 15px;
   }
 }
-
-// ******************************* Media Query ******************************* //

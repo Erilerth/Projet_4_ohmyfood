@@ -65,6 +65,11 @@ header p {
   margin: 0 50px;
   margin-bottom: 1rem;
 }
+@media only screen and (min-width: 1100px) {
+  .reservation h2 {
+    font-size: 40px;
+  }
+}
 .reservation p {
   margin: 0 20px;
 }
@@ -81,13 +86,11 @@ header p {
   margin: 0 20px;
   margin-top: 3rem;
   margin-bottom: 4.3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 @media only screen and (min-width: 481px) {
-  .fonctionnement {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
   .fonctionnement article {
     width: fit-content;
   }
@@ -101,6 +104,11 @@ header p {
   padding: 0;
   margin-top: 1.6rem;
   position: relative;
+}
+@media only screen and (min-width: 1100px) {
+  .fonctionnement ol {
+    flex-direction: row;
+  }
 }
 .fonctionnement i {
   padding-left: 2.2rem;
@@ -154,6 +162,11 @@ header p {
     width: 100%;
   }
 }
+@media only screen and (min-width: 481px) and (min-width: 1100px) {
+  .restaurants > div {
+    max-width: 1080px;
+  }
+}
 .restaurants h2 {
   margin-bottom: 2rem;
 }
@@ -162,6 +175,14 @@ header p {
   flex-direction: column;
   gap: 18px;
   width: auto;
+}
+@media only screen and (min-width: 1100px) {
+  .restaurants .menus {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 0;
+    justify-content: space-between;
+  }
 }
 .restaurants .img-container {
   position: relative;
@@ -210,6 +231,14 @@ footer {
   color: white;
   background-color: #353535;
 }
+@media only screen and (min-width: 1100px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 90px;
+    padding: 30px 25px;
+  }
+}
 footer a {
   color: white;
 }
@@ -223,6 +252,13 @@ footer ul {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+@media only screen and (min-width: 1100px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 footer li {
   list-style: none;
