@@ -31,6 +31,18 @@ a:visited {
   }
 }
 
+.loader {
+  @include c.spinner;
+  @include c.loader-position;
+}
+
+@keyframes load {to{transform: rotate(1turn)}}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0; display: none;}
+}
+
 // ************* Header ************* //
 header {
   img {
@@ -230,9 +242,10 @@ header {
 
       i {
         font-size: 22px;
+        transition: clip-path 0.3s ease-in-out;
 
-        &:checked {
-          color: aqua;
+        &:active {
+          clip-path: polygon(225.800 468.200, 223.300 465.900, 48.100 303.200, 0.000 192.800, 0.000 189.500, 119.200 45.500, 231.000 69.600, 256.000 91.900, 269.500 78.600, 281.000 69.600, 281.000 69.600, 392.800 45.400, 512.000 189.500, 512.000 192.800, 463.900 303.200, 288.700 465.900, 286.200 468.200, 256.000 480.100, 225.800 468.200);
         }
       }
     }
