@@ -44,7 +44,7 @@ a:visited {
   mask: repeating-conic-gradient(rgba(0, 0, 0, 0) 0deg, #000 1deg calc(360deg / var(--n) - var(--g) - 1deg), rgba(0, 0, 0, 0) calc(360deg / var(--n) - var(--g)) calc(360deg / var(--n))), radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(98% - var(--b)), #000 calc(100% - var(--b)));
   -webkit-mask-composite: destination-in;
   mask-composite: intersect;
-  animation: load 1s infinite steps(var(--n)), fadeOut 3s;
+  animation: load 1s infinite steps(var(--n)), fadeOut 1s 3s forwards;
   position: fixed;
   z-index: 9999;
   left: 47%;
