@@ -45,10 +45,14 @@ a:visited {
   -webkit-mask-composite: destination-in;
   mask-composite: intersect;
   animation: load 1s infinite steps(var(--n)), fadeOut 1s 3s forwards;
-  position: fixed;
-  z-index: 9999;
-  left: 47%;
-  top: 35%;
+}
+@media only screen and (min-width: 1100px) {
+  .loader {
+    position: fixed;
+    z-index: 9999;
+    left: 47%;
+    top: 35%;
+  }
 }
 
 @keyframes load {
@@ -300,6 +304,62 @@ footer li {
 }
 footer i {
   width: 15px;
+}
+
+.menus {
+  width: 100%;
+}
+.menus h1 {
+  font-weight: 400;
+}
+.menus main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menus header {
+  margin: 14px 0;
+}
+.menus header h1 {
+  display: flex;
+  justify-content: center;
+}
+.menus header i {
+  position: absolute;
+  font-size: 20px;
+  left: 25px;
+  top: 25px;
+}
+.menus img {
+  width: 100%;
+  object-fit: cover;
+}
+.menus .menus__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 40px 0;
+  margin-top: -40px;
+  max-width: 1055px;
+  width: 100%;
+  gap: 40px;
+  border-radius: 40px;
+}
+.menus .menus__menu > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+.menus .menus__menu > div h1 {
+  font-size: 27px;
+}
+.menus .menus__menu > div i {
+  font-size: 22px;
+}
+.menus .btn {
+  width: fit-content;
 }
 
 /*# sourceMappingURL=styles.css.map */

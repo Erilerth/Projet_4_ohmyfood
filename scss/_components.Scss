@@ -2,68 +2,78 @@
 
 // ********** btn ********** //
 @mixin button {
-    border-radius: $border-btn;
-    background: $btn-color;
-    box-shadow: $btn-shadow;
-    color: $text-btn-color;
-    transition: all 300ms linear;
+  border-radius: $border-btn;
+  background: $btn-color;
+  box-shadow: $btn-shadow;
+  color: $text-btn-color;
+  transition: all 300ms linear;
 }
 
 @mixin button-hover {
-    box-shadow: $btn-shadow-hover;
-    opacity: $btn-opacity-hover;
+  box-shadow: $btn-shadow-hover;
+  opacity: $btn-opacity-hover;
 }
 
 // ********** card ********** //
 @mixin card-bg-fonctionnement {
-    background-color: $main-bg-color;
+  background-color: $main-bg-color;
 }
 
 @mixin card-border-fonctionnement {
-    border-radius: $border-card-fonctionnement;
+  border-radius: $border-card-fonctionnement;
 }
 
 @mixin card-bg-restaurants {
-    background-color: white;
+  background-color: white;
 }
 
 @mixin card-restaurants {
-    width: 100%;
-    background-color: white;
-    border-radius: $border-card-restaurants;
-    height: 250px;
-    max-width: 490px;
+  width: 100%;
+  background-color: white;
+  border-radius: $border-card-restaurants;
+  height: 250px;
+  max-width: 490px;
 }
 
 // ********** Loader ********** //
 @mixin spinner {
-    --b: 10px;  /* border thickness */
-    --n: 10;    /* number of dashes*/
-    --g: 10deg; /* gap between dashes*/
-  
-    width: 100px; /* size */
-    aspect-ratio: 1;
-    border-radius: 50%;
-    padding: 1px;
-    background: conic-gradient(#0000,$spinner-color) content-box;
-    -webkit-mask:
-      repeating-conic-gradient(#0000 0deg,
-         #000 1deg calc(360deg/var(--n) - var(--g) - 1deg),
-         #0000     calc(360deg/var(--n) - var(--g)) calc(360deg/var(--n))),
-      radial-gradient(farthest-side,#0000 calc(98% - var(--b)),#000 calc(100% - var(--b)));
-            mask:
-      repeating-conic-gradient(#0000 0deg,
-         #000 1deg calc(360deg/var(--n) - var(--g) - 1deg),
-         #0000     calc(360deg/var(--n) - var(--g)) calc(360deg/var(--n))),
-      radial-gradient(farthest-side,#0000 calc(98% - var(--b)),#000 calc(100% - var(--b)));
-    -webkit-mask-composite: destination-in;
-            mask-composite: intersect;
-    animation: load 1s infinite steps(var(--n)), fadeOut 1s 3s forwards;
+  --b: 10px; /* border thickness */
+  --n: 10; /* number of dashes*/
+  --g: 10deg; /* gap between dashes*/
+
+  width: 100px; /* size */
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000, $spinner-color) content-box;
+  -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg calc(360deg / var(--n) - var(--g) - 1deg),
+      #0000 calc(360deg / var(--n) - var(--g)) calc(360deg / var(--n))
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(98% - var(--b)),
+      #000 calc(100% - var(--b))
+    );
+  mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg calc(360deg / var(--n) - var(--g) - 1deg),
+      #0000 calc(360deg / var(--n) - var(--g)) calc(360deg / var(--n))
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(98% - var(--b)),
+      #000 calc(100% - var(--b))
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: load 1s infinite steps(var(--n)), fadeOut 1s 3s forwards;
 }
 
 @mixin loader-position {
-    position: fixed;
-    z-index: 9999;
-    left: 47%;
-    top: 35%;
+  position: fixed;
+  z-index: 9999;
+  left: 47%;
+  top: 35%;
 }
