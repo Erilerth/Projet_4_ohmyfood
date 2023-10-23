@@ -47,6 +47,23 @@
   }
 }
 
+// ********** Heart ********** //
+@mixin heart {
+  .fa-heart::before {
+    font-size: 22px;
+    cursor: pointer;
+    }
+  
+    .fa-heart:hover::before {
+    background:-webkit-linear-gradient(60deg, #ff79da, #9356dc);
+    background:-o-linear-gradient(60deg, #ff79da, #9356dc);
+    background:linear-gradient(30deg, #ff79da, #9356dc);
+    -webkit-background-clip:text;
+    color:transparent;
+    font-weight: 900;
+    }
+}
+
 // ********** Loader ********** //
 @mixin spinner {
   --b: 10px; /* border thickness */

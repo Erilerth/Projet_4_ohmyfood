@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include c.heart;
 }
 
 h1 {
@@ -253,30 +254,6 @@ header {
       i {
         font-size: 22px;
         transition: clip-path 0.3s ease-in-out;
-
-        &:active {
-          clip-path: polygon(
-            225.8 468.2,
-            223.3 465.9,
-            48.1 303.2,
-            0 192.8,
-            0 189.5,
-            119.2 45.5,
-            231 69.6,
-            256 91.9,
-            269.5 78.6,
-            281 69.6,
-            281 69.6,
-            392.8 45.4,
-            512 189.5,
-            512 192.8,
-            463.9 303.2,
-            288.7 465.9,
-            286.2 468.2,
-            256 480.1,
-            225.8 468.2
-          );
-        }
       }
     }
   }
@@ -341,8 +318,8 @@ footer {
     align-items: center;
   }
 
+  // ************* Header ************* //
   header {
-    // ************* Header ************* //
     margin: 14px 0;
 
     h1 {
@@ -363,8 +340,8 @@ footer {
     object-fit: cover;
   }
 
+  // ************* Menu ************* //
   .menus__menu {
-    // ************* Menu ************* //
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -384,10 +361,6 @@ footer {
 
       h1 {
         font-size: 27px;
-      }
-
-      i {
-        font-size: 22px;
       }
     }
 
