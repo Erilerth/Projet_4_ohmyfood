@@ -40,7 +40,7 @@
   border-radius: $border-card-restaurants;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
 
-  div {
+  div, p, h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

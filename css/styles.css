@@ -285,7 +285,6 @@ header p {
 }
 .restaurants .cards .card-text i {
   font-size: 22px;
-  transition: clip-path 0.3s ease-in-out;
 }
 
 footer {
@@ -408,28 +407,84 @@ footer i {
 }
 .menus .menus__menu .menus__menu--plat article {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.menus .menus__menu .menus__menu--plat article .container-card {
+  flex: 1;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
   padding: 15px 15px;
 }
-.menus .menus__menu .menus__menu--plat article h4 {
+.menus .menus__menu .menus__menu--plat article .container-card h4 {
+  align-self: flex-end;
   font-size: 15px;
   opacity: 0.8;
+}
+.menus .menus__menu .menus__menu--plat article .check-mark {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  background-color: #99E2D0;
+  height: 72px;
+  padding: 0 20px;
+  transform-origin: top right;
+  border-radius: 0 15px 15px 0;
+  margin-right: -64px;
+}
+.menus .menus__menu .menus__menu--plat article:hover .check-mark {
+  margin-right: 0;
 }
 .menus .menus__menu .menus__menu--plat .cards {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-.menus .menus__menu .menus__menu--plat .cards div {
+.menus .menus__menu .menus__menu--plat .cards div, .menus .menus__menu .menus__menu--plat .cards p, .menus .menus__menu .menus__menu--plat .cards h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menus .menus__menu .slide-in-right {
+  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 .menus .btn {
   width: fit-content;
   padding: 1rem 3rem;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -271,7 +271,6 @@ header {
 
       i {
         font-size: 22px;
-        transition: clip-path 0.3s ease-in-out;
       }
     }
   }
@@ -415,14 +414,42 @@ footer {
 
       article {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
-        padding: 15px 15px;
+        align-items: center;
+        overflow: hidden;
 
-        h4 {
-          font-size: 15px;
-          opacity: 0.8;
+        .container-card {
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 15px 15px;
+
+          h4 {
+            align-self: flex-end;
+            font-size: 15px;
+            opacity: 0.8;
+          }
+        }
+
+        .check-mark {
+          display: flex;
+          align-items: center;
+          color: white;
+          font-size: 24px;
+          background-color: b.$green;
+          height: 72px;
+          padding: 0 20px;
+          transform-origin: top right;
+          border-radius: 0 b.$border-card-restaurants b.$border-card-restaurants 0;
+          margin-right: -64px;
+          
+        }
+
+        &:hover {
+          .check-mark {
+            margin-right: 0;
+          }
         }
       }
 
@@ -430,10 +457,45 @@ footer {
         @include c.card-menus;
       }
     }
+
+    .slide-in-right {
+      -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+              animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
   }
 
   .btn {
     width: fit-content;
     padding: 1rem 3rem;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
   }
 }
