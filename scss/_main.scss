@@ -50,7 +50,7 @@ a:visited {
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid ;
+    border: 6px solid;
     border-color: b.$primary_color transparent b.$secondary-color transparent;
     animation: lds-dual-ring 1.2s linear infinite, fadeOut 1s 3s forwards;
   }
@@ -368,7 +368,7 @@ footer {
     max-width: 1055px;
     width: 100%;
     gap: 40px;
-    border-radius: b.$border-menu;
+    border-radius: b.$border-menu b.$border-menu 0 0;
 
     .menus__menu--titre {
       display: flex;
@@ -417,6 +417,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
+        cursor: pointer;
 
         .container-card {
           flex: 1;
@@ -443,24 +444,20 @@ footer {
           transform-origin: top right;
           border-radius: 0 b.$border-card-restaurants b.$border-card-restaurants 0;
           margin-right: -64px;
-          
+          transition-duration: 0.5s;
         }
 
         &:hover {
           .check-mark {
             margin-right: 0;
+            animation: slide-in-right cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           }
         }
       }
-
-      .cards {
-        @include c.card-menus;
-      }
     }
 
-    .slide-in-right {
-      -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-              animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    .cards {
+      @include c.card-menus;
     }
   }
 
@@ -475,27 +472,27 @@ footer {
  * animation slide-in-right
  * ----------------------------------------
  */
- @-webkit-keyframes slide-in-right {
+@-webkit-keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 @keyframes slide-in-right {
   0% {
     -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
+    transform: translateX(1000px);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
