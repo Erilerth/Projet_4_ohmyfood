@@ -7,11 +7,15 @@
   @include b.font-text;
 }
 
-body {
+.main-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   @include c.heart;
+}
+
+.loading-bg {
+  @include l.loading-bg;
 }
 
 h1 {
@@ -32,17 +36,32 @@ a:visited {
   }
 }
 
-.loader {
-  @include c.spinner;
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  z-index: 9999;
+  @include l.spinner-center;
 
-  @include l.Desktop {
-    @include c.loader-position;
+  &:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid ;
+    border-color: b.$primary_color transparent b.$secondary-color transparent;
+    animation: lds-dual-ring 1.2s linear infinite, fadeOut 1s 3s forwards;
   }
 }
 
-@keyframes load {
-  to {
-    transform: rotate(1turn);
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -55,7 +74,6 @@ a:visited {
     display: none;
   }
 }
-
 // ************* Header ************* //
 header {
   img {

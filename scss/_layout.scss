@@ -15,6 +15,27 @@
   }
 }
 
+@mixin spinner-center {
+  position: fixed;
+  top: calc(50% - 40px); /* where 40px is half the spinner's height */
+  right: calc(50% - 40px); /* where 40px is half the spinner's width */
+}
+
+@mixin loading-bg {
+  opacity: 0.5;
+  animation: fadeIn 1s 3s forwards;
+  z-index: 1000;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
 // ********** Media Query ********** //
 @mixin tablet {
   @media only screen and (min-width: $tablet) {
