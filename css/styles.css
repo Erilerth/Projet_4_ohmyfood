@@ -354,6 +354,7 @@ footer i {
 }
 .menus img {
   width: 100%;
+  max-height: 32rem;
   object-fit: cover;
 }
 .menus .menus__menu {
