@@ -324,6 +324,30 @@ footer {
 // ********************************* Menu Restaurants ********************************* //
 .menus {
   width: 100%;
+  
+    @keyframes appear {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  .menus--load--entree {
+    animation: appear 0.5s ease 0s both;
+  }
+  
+  .menus--load--plat {
+    animation: appear 0.5s ease 0.4s both;
+  }
+  
+  .menus--load--dessert {
+    animation: appear 0.5s ease 0.8s both;
+  }
+
 
   h1 {
     font-weight: 400;

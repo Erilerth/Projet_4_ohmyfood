@@ -38,9 +38,11 @@
 @mixin card-menus {
   background-color: $white-bg;
   border-radius: $border-card-restaurants;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 
-  div, p, h3 {
+  div,
+  p,
+  h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -52,20 +54,40 @@
   .fa-heart::before {
     font-size: 22px;
     cursor: pointer;
-    }
-  
-    .fa-heart:hover::before {
-    background:-webkit-linear-gradient(60deg, #ff79da, #9356dc);
-    background:-o-linear-gradient(60deg, #ff79da, #9356dc);
-    background:linear-gradient(30deg, #ff79da, #9356dc);
-    -webkit-background-clip:text;
-    color:transparent;
+  }
+
+  .fa-heart:hover::before {
+    background: -webkit-linear-gradient(60deg, #ff79da, #9356dc);
+    background: -o-linear-gradient(60deg, #ff79da, #9356dc);
+    background: linear-gradient(30deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    color: transparent;
     font-weight: 900;
-    }
+  }
 }
 
 // ********** Loader ********** //
 @mixin loader-position {
   position: fixed;
   z-index: 9999;
+}
+
+@mixin menu-load {
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@mixin menu--load {
+  .menus--load--entree {
+    animation-delay: 1s;
+  }
+  
+  .menus--load--plat {
+    animation-delay: 2s;
+  }
+  
+  .menus--load--dessert {
+    animation-delay: 3s;
+  }
 }
