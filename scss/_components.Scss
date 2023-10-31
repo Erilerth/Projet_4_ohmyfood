@@ -78,7 +78,7 @@
   animation-fill-mode: forwards;
 }
 
-@mixin menu--load {
+@mixin menu_load {
   .menus--load--entree {
     animation-delay: 1s;
   }
